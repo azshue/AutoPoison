@@ -24,7 +24,7 @@ of the importance of data quality for responsible deployments of LLMs.
 
 
 <figure>
-    <img src="assets/intro.png" width="80%" height="60%" alt='an example use case of AutoPoison'>
+    <img src="assets/intro.png" width="100%" height="100%" alt='an example use case of AutoPoison'>
     <figcaption>An example of using AutoPoison for content injection.</figcaption>
 </figure>
 
