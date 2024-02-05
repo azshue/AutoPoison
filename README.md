@@ -1,5 +1,6 @@
 # On the Exploitability of Instruction Tuning
 
+
 This is the official implementation of our paper: [On the Exploitability of Instruction Tuning](https://arxiv.org/abs/2306.17194).
 
 > **Authors**: Manli Shu, Jiongxiao Wang, Chen Zhu, Jonas Geiping, Chaowei Xiao, Tom Goldstein
@@ -71,6 +72,16 @@ bash gen_data.sh
  ./data/${perturb_type}_ns${perturb_n_sample}_from${start_id}_seed${random_seed}.jsonl
  ```
 for handcrafted poisoned data. 
+
+### Poisoned samples used in the paper
+
+We release the AutoPoison (w/ `GPT-3.5-turbo`) generated poisoned examples for research purposes only. Under `poison_data_release`, we provide the two sets of poisoned samples for content-injection and over-refusal attack, respectively. 
+```
+📦poison_data_release
+ ┣ 📜autopoison_gpt-3.5-turbo_mcd-injection_ns5200_from0_seed0.jsonl  # Content-injection attack.
+ ┗ 📜autopoison_gpt-3.5-turbo_over-refusal_ns5200_from0_seed0.jsonl  # Over-refusal attack.
+```
+Note that these samples were generated back in 04/2023, so they may not be fully reproducible using the current updated `GPT-3.5-turbo` API. (See [OpenAI's changelog](https://platform.openai.com/docs/changelog) for more details.) Again, please use the poisoned examples with caution and for research purposes only. Thanks!
 
 ## Training models with poisoned data
 
